@@ -1,5 +1,5 @@
 :root {
-    --background: rgb(224, 234, 247);
+    --background: rgb(248, 202, 221);
     --header-background: white;
     --footer-background: rgb(243, 242, 242);
 }
@@ -32,4 +32,16 @@ footer {
     display: flex;
     justify-content: flex-end;
     background-color: var(--footer-background);
+}
+
+#sign-up-form {
+    border: 3px solid black;
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    align-items: center;
+}
+
+.button {
+    width: 30%;
 }
