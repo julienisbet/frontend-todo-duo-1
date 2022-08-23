@@ -10,22 +10,32 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;600&family=Titillium+Web:wght@200;400;600&display=swap">
-    <link rel="stylesheet" href="/styles/reset.css" />
     <link rel="stylesheet" href="/styles/global.css" />
     <title>Web App</title>
 </head>
 
 <body>
     <header>
-        <img src="/assets/html_css_js.png">
-        <h1>Web App</h1>
+        <img height="150px" src="./assets/broom_logo.jpeg">
+        <h1>Todo List</h1>
     </header>
 
     <main>
-
+        <form id="sign-up-form">
+            <h2 class="sign-up">Sign Up</h2>
+            <label for="first-name">First Name</label>
+            <input type="text" name="first-name" class="input" placeholder="First Name" />
+            <label for="last-name">Last Name</label>
+            <input type="text" name="last-name" class="input" placeholder="Last Name" />
+            <label for="email">Email</label>
+            <input type="email" name="email" class="input" placeholder="Email" />
+            <label for="password">Password</label>
+            <input type="password" name="password" class="input" placeholder="Password" />
+            <button class="button">Submit</button>
+        </form>
     </main>
 
-    <footer>&copy;2022 Software Developer</footer>
+    <footer>&copy;2022 Amanda & Niki</footer>
 
     <script type="module" src="app.js"></script>
 </body>
