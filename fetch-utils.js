@@ -1,4 +1,4 @@
-const BASE_URL = 'http://localhost:7890';
+const BASE_URL = 'http://localhost:7899';
 
 export async function signUpUser(userInfo) {
     const resp = await fetch(`${BASE_URL}/api/v1/users`, {
@@ -39,7 +39,7 @@ export async function signInUser(userInfo) {
 export async function getUser() {
     const res = await fetch(`${BASE_URL}/api/v1/users/me`, {
         method: 'GET',
-        headaers: {
+        headers: {
             Accept: 'appication/json',
             'Content-Type': 'application/json',
         }, credentials: 'include',
@@ -70,3 +70,18 @@ export async function logoutUser() {
         location.replace('../');
     }
 }
+
+export async function getTodo() {
+    const res = await fetch(`${BASE_URL}/api/v1/todos`, {
+        method: 'GET',
+        headers: {
+            Accept: 'appication/json',
+            'Content-Type': 'application/json',
+        }, credentials: 'include',
+    });
+    if (res.ok) {
+        const todo = await res.json();
+        return todo;
+    }
+}
+
