@@ -11,7 +11,7 @@ const tasksDiv = document.getElementById('task');
 async function onLoad() {
     toDo = await getTodo();
     toDo.map((task) => {
-        const header = document.createElement('h2');
+        const header = document.createElement('p');
         header.textContent = task.room;
         const div = document.createElement('div');
         div.textContent = task.chore;

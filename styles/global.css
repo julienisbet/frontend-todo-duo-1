@@ -1,7 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Princess+Sofia&display=swap');
 
 body {
-    height: 100vh;
     font-family: 'Rubik', san-serif;
     background-image: url(../assets/pink.jpeg);
     background-size: cover;
@@ -9,6 +8,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    height: 100vh;
 }
 
 header {
@@ -103,4 +103,18 @@ input {
 
 #welcome {
     font-size: 45px;
+}
+
+#task {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 10px;
+    outline: 5px solid black;
+}
+
+div {
+    outline: 3px solid red;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 5px;
 }

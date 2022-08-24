@@ -75,7 +75,7 @@ export async function getTodo() {
     const res = await fetch(`${BASE_URL}/api/v1/todos`, {
         method: 'GET',
         headers: {
-            Accept: 'appication/json',
+            Accept: 'application/json',
             'Content-Type': 'application/json',
         }, credentials: 'include',
     });
@@ -85,3 +85,10 @@ export async function getTodo() {
     }
 }
 
+export async function toggleTodo(todo) {
+    const res = await fetch
+        .from ('todos')
+        .update({ complete: !todo.complete })
+        .match({ id: todo.id });
+    return res.data;
+}
