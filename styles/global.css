@@ -40,6 +40,15 @@ footer {
     flex-direction: column;
     width: 50%;
     align-items: center;
+    margin-bottom: 10px;
+}
+
+#sign-in-form {
+    border: 3px solid black;
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    align-items: center;
 }
 
 .button {
