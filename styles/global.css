@@ -1,27 +1,38 @@
-:root {
-    --background: rgb(248, 202, 221);
-    --header-background: white;
-    --footer-background: rgb(243, 242, 242);
-}
+@import url('https://fonts.googleapis.com/css2?family=Princess+Sofia&display=swap');
 
 body {
     height: 100vh;
     font-family: 'Rubik', san-serif;
-    background: var(--background);
-    display: grid;
-    grid-template-rows: auto 1fr auto;
+    background-image: url(../assets/pink.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 header {
-    position: sticky;
-    top: 0;
     display: flex;
+    flex-direction: row;
+    background-color: rgba(0, 0, 0, 0.156);
     align-items: center;
-    background-color: var(--header-background);
+    font-family: 'Princess Sofia', cursive;
+    font-size: 40px;
+    border-radius: 20px;
+    width: 75%;
+    justify-content: center;
+}
+
+#todo {
+    position: static;
+    right: 50%;
 }
 
 main {
-    padding: 20px;
+    display: flex;
+    flex-direction: row;
+    margin: 10px;
+    justify-content: center;
 }
 
 footer {
@@ -35,22 +46,61 @@ footer {
 }
 
 #sign-up-form {
-    border: 3px solid black;
     display: flex;
     flex-direction: column;
-    width: 50%;
     align-items: center;
-    margin-bottom: 10px;
+    background-color: rgba(0, 0, 0, 0.156);
+    margin: 15px;
+    padding-bottom: 10px;
+    padding: 30px;
+    border-radius: 20px;
 }
 
 #sign-in-form {
-    border: 3px solid black;
     display: flex;
     flex-direction: column;
-    width: 50%;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.156);
+    margin: 15px;
+    padding-bottom: 10px;
+    padding: 30px;
+    border-radius: 20px;
+}
+
+button {
+    background-color: rgba(0, 0, 0, 0.105);
+    border-radius: 50px;
+    margin-top: 5px;
+}
+
+#sign-in-btn {
+    margin-top: 55px;
+}
+
+button:hover {
+    background-color: palevioletred;
+}
+
+h2 {
+    display: flex;
     align-items: center;
 }
 
-.button {
-    width: 30%;
+input {
+    margin: 5px;
+    padding: 3px;
+}
+
+#logout {
+    border-radius: 50%;
+    width: 120px;
+    padding-top: 10px;
+}
+
+#logout p {
+    margin: 3px;
+}
+
+#welcome {
+    font-size: 45px;
 }

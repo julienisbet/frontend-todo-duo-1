@@ -16,8 +16,8 @@
 
 <body>
     <header>
-        <img height="150px" src="./assets/broom_logo.jpeg">
-        <h1>Todo List</h1>
+        <img id="broom-logo" height="150px" src="./assets/broom_logo-removebg-preview.png">
+        <h1 id="todo">Todo List:</h1>
     </header>
 
     <main>
@@ -31,15 +31,19 @@
             <input type="email" name="email" class="input" placeholder="Email" />
             <label for="password">Password</label>
             <input type="password" name="password" class="input" placeholder="Password" />
-            <button class="button">Submit</button>
+            <button class="button">
+                <img src="/assets/crown_button.png">
+            </button>
         </form>
         <form id="sign-in-form">
-            <h2 class="sign-up">Already have an account? <br/>Sign Up</h2>
+            <h2>Sign In</h2>
             <label for="email">Email</label>
             <input type="email" name="email" class="input" placeholder="Email" />
             <label for="password">Password</label>
             <input type="password" name="password" class="input" placeholder="Password" />
-            <button class="button">Submit</button>
+            <button id="sign-in-btn" class="button">
+                <img src="/assets/crown_button.png">
+            </button>
         </form>
     </main>
 
