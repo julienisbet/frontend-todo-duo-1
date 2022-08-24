@@ -25,3 +25,7 @@ Additional considerations:
     -   What needs to live in a persistence layer?
 -   Is there some state we need to initialize?
 -   Ask: should any of this work be abstracted into functions? (i.e., is the work complicated? can it be reused?)
+
+<a target="_blank" href="https://icons8.com/icon/Y6YssI9vnkJH/crown">Crown</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a>
+
+<a target="_blank" href="https://icons8.com/icon/Og5ete9Je3R3/carriage">Carriage</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a>
