@@ -62,6 +62,25 @@ export async function redirectIfLoggedIn() {
     }
 }
 
+export async function addChore(chore) {
+    const res = await fetch(`${BASE_URL}/api/v1/todos`, {
+        method: 'POST',
+        headers: {
+            Accept: 'application/json',
+            'Content-Type': 'application/json',
+        }, credentials: 'include', 
+        body: JSON.stringify(
+            chore
+        )
+    });
+    const todo = await res.json();
+    if (res.ok) {
+        return todo;
+    } else {
+        throw new Error(todo.message);
+    }    
+}
+
 export async function logoutUser() {
     const res = await fetch(`${BASE_URL}/api/v1/users/sessions`, {
         method: 'DELETE', credentials: 'include',

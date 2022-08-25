@@ -113,8 +113,30 @@ input {
 }
 
 div {
-    outline: 3px solid red;
     display: flex;
     flex-wrap: wrap;
     margin: 5px;
+    background-color: rgba(0, 0, 0, 0.105);
+    
+}
+
+#new-task {
+    outline: 5px solid black;
+    margin-top: 15px;
+    background-color: rgba(0, 0, 0, 0.105);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.chores {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.add{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }

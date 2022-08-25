@@ -1,4 +1,5 @@
-import { checkUser, logoutUser, getTodo, toggleTodo } from '../fetch-utils.js';
+import { checkUser, logoutUser, getTodo, toggleTodo, addChore } from '../fetch-utils.js';
+const tasksDiv = document.getElementById('task');
 
 checkUser();
 
@@ -7,15 +8,23 @@ logout.addEventListener('click', async () => {
     await logoutUser();
 });
 
-const addChore = document.getElementById('addChore');
-logout.addEventListener('click', async () => {
-    await addChore();
+const chores = document.getElementById('new-task');
+chores.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const formData = new FormData(chores);
+    await addChore({
+        chore: formData.get('chore'),
+        room: formData.get('room'),
+    });
+    onLoad();
 });
 
+
+
 let toDo = [];
-const tasksDiv = document.getElementById('task');
 async function onLoad() {
     toDo = await getTodo();
+    tasksDiv.innerHTML = '';
     toDo.map((task) => {
         const header = document.createElement('p');
         header.textContent = task.room;
@@ -30,6 +39,7 @@ async function onLoad() {
         });
         div.append(header, checkBox);
         tasksDiv.append(div);
+
     });
 }
 onLoad();
