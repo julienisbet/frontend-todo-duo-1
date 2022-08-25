@@ -1,4 +1,4 @@
-const BASE_URL = 'http://localhost:7899';
+const BASE_URL = 'https://todobackendduo.herokuapp.com';
 
 export async function signUpUser(userInfo) {
     const resp = await fetch(`${BASE_URL}/api/v1/users`, {
