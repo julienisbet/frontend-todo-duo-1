@@ -1,4 +1,4 @@
-import { checkUser, logoutUser, getTodo } from '../fetch-utils.js';
+import { checkUser, logoutUser, getTodo, toggleTodo } from '../fetch-utils.js';
 
 checkUser();
 const logout = document.getElementById('logout');
@@ -15,7 +15,14 @@ async function onLoad() {
         header.textContent = task.room;
         const div = document.createElement('div');
         div.textContent = task.chore;
-        div.append(header);
+        const checkBox = document.createElement('input');
+        checkBox.type = 'checkbox';
+        checkBox.checked = task.complete;
+        checkBox.addEventListener('change', async (e) => {
+            e.preventDefault;
+            await toggleTodo(task);
+        });
+        div.append(header, checkBox);
         tasksDiv.append(div);
     });
 }
