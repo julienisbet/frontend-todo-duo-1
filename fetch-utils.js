@@ -75,7 +75,7 @@ export async function getTodo() {
     const res = await fetch(`${BASE_URL}/api/v1/todos`, {
         method: 'GET',
         headers: {
-            Accept: 'appication/json',
+            Accept: 'application/json',
             'Content-Type': 'application/json',
         }, credentials: 'include',
     });
@@ -85,3 +85,14 @@ export async function getTodo() {
     }
 }
 
+export async function toggleTodo(todo) {
+    const res = await fetch(`${BASE_URL}/api/v1/todos/${todo.id}`, {
+        method: 'PUT',
+        headers: {
+            Accept: 'application/json',
+            'Content-Type': 'application/json',
+        }, body: JSON.stringify({ complete: !todo.complete }),
+        credentials: 'include',
+    });
+    return res;
+}
