@@ -54,6 +54,8 @@ footer {
     padding-bottom: 10px;
     padding: 30px;
     border-radius: 20px;
+    border: 15px solid transparent;
+    border-image: url(../assets/star.png) 30 round;
 }
 
 #sign-in-form {
@@ -65,6 +67,8 @@ footer {
     padding-bottom: 10px;
     padding: 30px;
     border-radius: 20px;
+    border: 15px solid transparent;
+    border-image: url(../assets/star.png) 30 round;
 }
 
 button {
@@ -109,7 +113,8 @@ input {
     display: flex;
     flex-wrap: wrap;
     margin: 10px;
-    outline: 5px solid black;
+    border: 15px solid transparent;
+    border-image: url(../assets/star.png) 30 round;
 }
 
 div {
@@ -121,7 +126,8 @@ div {
 }
 
 #new-task {
-    outline: 5px solid black;
+    border: 15px solid transparent;
+    border-image: url(../assets/star.png) 30 round;
     margin-top: 15px;
     background-color: rgba(0, 0, 0, 0.105);
     display: flex;
